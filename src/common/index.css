@@ -1,16 +1,112 @@
+@font-face {
+  font-family: "JetBrainsMono-Bold";
+  src: local("JetBrainsMono-Bold"),
+    url("../assets/fonts/static/JetBrainsMono-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "JetBrainsMono-BoldItalic";
+  src: local("JetBrainsMono-BoldItalic"),
+    url("../assets/fonts/static/JetBrainsMono-BoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "JetBrainsMono-Italic-VariableFont_wght";
+  src: local("JetBrainsMono-Italic-VariableFont_wght"),
+    url("../assets/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "JetBrainsMono-VariableFont_wght";
+  src: local("JetBrainsMono-VariableFont_wght"),
+    url("../assets/fonts/JetBrainsMono-VariableFont_wght.ttf") format("truetype");
+}
+
 :root {
+  --font-family-bold: "JetBrainsMono-Bold";
+  --font-family-bold-italic: "JetBrainsMono-BoldItalic";
+  --font-family-italic-variable: "JetBrainsMono-Italic-VariableFont_wght";
+  --font-family-variable: "JetBrainsMono-VariableFont_wght";
+  --font-24px: 1.5rem;
+  --font-16px: 1rem;
+  --line-height-32px: 2rem;
+  --line-height-21px: 1.313rem;
+  --font-weight-700: 700;
   --black: #18171F;
   --grey: #817D92;
   --light-white: #E6E5EA;
   --light-black: #24232C;
+  --backgroud-black: #08070B;
   --green: #A4FFAF;
   --red: #F64A4A;
   --orange: #FB7C58;
   --yellow: #F8CD65;
+
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-style: normal;
+}
+
+main {
+  background-color: var(--backgroud-black);
+  min-height: 100vh;
+  height: 100%;
+}
+
+.generator {
+  display: flex;
+  align-items: center;
+  padding: 64px 16px;
+  flex-direction: column;
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  gap: 16px;
+
+}
+
+.generator__title-container {}
+
+.generator__title {
+  font-family: var(--font-family-variable);
+  font-weight: var(--font-weight-700);
+  font-size: var(--font-16px);
+  line-height: var(--line-height-21px);
+  text-align: center;
+  color: var(--grey);
+}
+
+.generator__top-container {
+  width: 343px;
+  height: 64px;
+  padding: 16px;
+  background: var(--light-black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.generator__password {
+  font-family: var(--font-family-variable);
+  font-weight: var(--font-weight-700);
+  font-size: var(--font-24px);
+  line-height: var(--line-height-32px);
+  color: var(--light-white);
+}
+
+path:hover {
+  fill: white;
+  cursor: pointer;
+}
+
+.generator__bottom-container {
+  width: 343px;
+  height: 423px;
+  padding: 16px;
+  background: var(--light-black);
 }
