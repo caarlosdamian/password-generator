@@ -28,8 +28,10 @@
   --font-family-italic-variable: "JetBrainsMono-Italic-VariableFont_wght";
   --font-family-variable: "JetBrainsMono-VariableFont_wght";
   --font-24px: 1.5rem;
+  --font-18px: 1.125rem;
   --font-16px: 1rem;
   --line-height-32px: 2rem;
+  --line-height-24px: 1.5rem;
   --line-height-21px: 1.313rem;
   --font-weight-700: 700;
   --black: #18171F;
@@ -109,4 +111,45 @@ path:hover {
   height: 423px;
   padding: 16px;
   background: var(--light-black);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.generator__checkboxes-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.checkbox {
+  display: flex;
+  gap: 24px;
+  cursor: pointer;
+}
+
+.checkbox__box {
+  border: 2px solid var(--light-white);
+  height: 20px;
+  width: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox__box:hover {
+  border: 2px solid var(--green);
+}
+
+.checked {
+  background: var(--green);
+  border: 2px solid var(--green);
+}
+
+.checkbox__label {
+  font-family: var(--font-family-variable);
+  font-weight: var(--font-weight-700);
+  font-size: var(--font-16px);
+  line-height: var(--line-height-21px);
+  color: var(--light-white);
 }
