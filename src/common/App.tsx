@@ -1,8 +1,9 @@
 import React, { useMemo, useState } from 'react';
 import { Slider } from '../components/slider/Slider';
-import { checkboxInfo } from '../utils/data';
+import { checkboxInfo, generatePassword } from '../utils/data';
 import { Checkbox } from '../components/checkbox/Checkbox';
 import { Indicator } from '../components/indicator/Indicator';
+import arrow from '../assets/images/icon-arrow-right.svg';
 
 export const App = () => {
   const [charactersValue, setCharactersValue] = useState(20);
@@ -18,8 +19,6 @@ export const App = () => {
     });
     setChekboxes(newState);
   };
-
-  console.log('====checkboxes==',checkboxes)
 
   // const handleCopy = () => {
   //   navigator.clipboard.writeText('Espppppppp');
@@ -61,7 +60,17 @@ export const App = () => {
               />
             ))}
           </div>
-          <Indicator options={checkboxes}/>
+          <div className="generator__actions-wrapper">
+            <Indicator options={checkboxes} />
+            <button
+              onClick={() => {
+                console.log(generatePassword(checkboxes, characters));
+              }}
+            >
+              <span>GENERATE</span>
+              <img src={arrow} alt="arrow" />
+            </button>
+          </div>
         </section>
       </div>
     </main>

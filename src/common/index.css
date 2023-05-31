@@ -153,3 +153,37 @@ path:hover {
   line-height: var(--line-height-21px);
   color: var(--light-white);
 }
+
+.generator__actions-wrapper{
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+}
+
+button {
+  padding: 18px;
+  background: #A4FFAF;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: #24232C;
+  max-height: 56px;
+  cursor: pointer;
+}
+
+button:hover {
+  border: 2px solid #A4FFAF;
+  background: #24232C;
+  color: #A4FFAF;
+}
+
+button>span {
+  font-family: var(--font-family-variable);
+  font-weight: var(--font-weight-700);
+  font-size: var(--font-16px);
+  line-height: var(--line-height-21px);
+  text-align: center;
+
+}
