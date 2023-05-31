@@ -32,7 +32,6 @@ export const generatePassword = (checkboxInfo: CheckboxI[], length: number) => {
   const uppercaseLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   const numbers = '0123456789';
   const symbols = '!@#$%^&*()';
-  console.log('length', length);
   let passwordOptions = '';
 
   // Build the password options based on the checked checkboxes

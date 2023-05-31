@@ -9,12 +9,12 @@
 }
 
 .indicator__title {
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 21px;
+    font-weight: var(--font-weight-700);
+    font-size: var(--font-16px);
+    line-height: var(--line-height-21px);
     text-align: center;
     font-family: var(--font-family-variable);
-    color: #817D92;
+    color: var(--grey);
 }
 
 .indicator__data {
@@ -24,11 +24,11 @@
 
 .indicator__data-title {
     font-family: var(--font-family-variable);
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 24px;
+    font-weight: var(--font-weight-700);
+    font-size: var(--font-18px);
+    line-height: var(--line-height-24px);
     text-align: right;
-    color: #E6E5EA;
+    color: var(--light-white);
     text-transform: uppercase;
 }
 
@@ -38,26 +38,46 @@
 }
 
 .indicator__data-grid__item {
-    border: 2px solid #E6E5EA;
+    border: 2px solid var(--light-white);
     width: 10px;
 }
 
 .too-weak>.indicator__data-grid__item:nth-child(1) {
-    background-color: #F64A4A;
-    border: 2px solid #F64A4A;
+    background-color: var(--red);
+    border: 2px solid var(--red);
 }
 
 .weak>.indicator__data-grid__item:nth-child(-n+2) {
-    background-color: #FB7C58;
-    border: 2px solid #FB7C58;
+    background-color: var(--orange);
+    border: 2px solid var(--orange);
 }
 
 .medium>.indicator__data-grid__item:nth-child(-n+3) {
-    background-color: #F8CD65;
-    border: 2px solid #F8CD65;
+    background-color: var(--yellow);
+    border: 2px solid var(--yellow);
 }
 
 .strong>.indicator__data-grid__item:nth-child(-n+4) {
-    background-color: #A4FFAF;
-    border: 2px solid #A4FFAF;
+    background-color: var(--green);
+    border: 2px solid var(--green);
+}
+
+
+
+@media (min-width: 600px) {
+    .indicator {
+        min-width: 476px;
+        height: 72px;
+        padding: 20px 32px;
+    }
+
+    .indicator__title {
+        font-size: var(--font-18px);
+        line-height: var(--line-height-24px);
+    }
+
+    .indicator__data-title {
+        font-size: var(--font-24px);
+        line-height: var(--line-height-32px);
+    }
 }

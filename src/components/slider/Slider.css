@@ -91,3 +91,21 @@ input[type="range"]::-moz-range-track {
     background-color: #aaa;
     border-radius: 5px;
 }
+
+
+@media (min-width: 600px) {
+
+    .slider {
+        gap: 24px;
+    }
+
+    .slider__title {
+        font-size: var(--font-18px);
+        line-height: var(--line-height-24px);
+    }
+
+    .slider__subtitle {
+        font-size: var(--font-32px);
+        line-height: var(--line-height-42px);
+    }
+}

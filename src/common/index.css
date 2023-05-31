@@ -27,9 +27,11 @@
   --font-family-bold-italic: "JetBrainsMono-BoldItalic";
   --font-family-italic-variable: "JetBrainsMono-Italic-VariableFont_wght";
   --font-family-variable: "JetBrainsMono-VariableFont_wght";
+  --font-32px: 2rem;
   --font-24px: 1.5rem;
   --font-18px: 1.125rem;
   --font-16px: 1rem;
+  --line-height-42px: 2.625rem;
   --line-height-32px: 2rem;
   --line-height-24px: 1.5rem;
   --line-height-21px: 1.313rem;
@@ -71,7 +73,6 @@ main {
 
 }
 
-.generator__title-container {}
 
 .generator__title {
   font-family: var(--font-family-variable);
@@ -90,6 +91,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  min-height: 80px;
 
 }
 
@@ -99,6 +101,27 @@ main {
   font-size: var(--font-24px);
   line-height: var(--line-height-32px);
   color: var(--light-white);
+}
+
+.empty {
+  color: #E6E5EA;
+  mix-blend-mode: normal;
+  opacity: 0.25;
+}
+
+.generator__icon-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.generator__icon-title {
+  font-family: var(--font-family-variable);
+  font-weight: var(--font-weight-700);
+  font-size: var(--font-18px);
+  line-height: var(--line-height-24px);
+  color: #A4FFAF;
+  text-transform: uppercase;
 }
 
 path:hover {
@@ -119,7 +142,7 @@ path:hover {
 .generator__checkboxes-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
 }
 
 .checkbox {
@@ -154,7 +177,7 @@ path:hover {
   color: var(--light-white);
 }
 
-.generator__actions-wrapper{
+.generator__actions-wrapper {
   display: flex;
   gap: 16px;
   flex-direction: column;
@@ -186,4 +209,53 @@ button>span {
   line-height: var(--line-height-21px);
   text-align: center;
 
+}
+
+@media (min-width: 600px) {
+  .generator {
+    gap: 24px;
+  }
+
+  .generator__title {
+    font-size: var(--font-24px);
+    line-height: var(--line-height-32px);
+  }
+
+  .generator__icon-wrapper {
+    gap: 16px;
+  }
+
+  .generator__bottom-container {
+    width: 540px;
+    height: 528px;
+    padding: 24px 32px;
+  }
+
+  .generator__top-container {
+    width: 540px;
+  }
+
+  .generator__checkboxes-wrapper {
+    gap: 20px;
+  }
+
+  .checkbox__label {
+    font-size: var(--font-18px);
+    line-height: var(--line-height-24px);
+  }
+
+  .generator__actions-wrapper {
+    gap: 32px;
+  }
+
+  button {
+    padding: 22px;
+    max-height: 65px;
+  }
+
+  button>span {
+    font-size: var(--font-18px);
+    line-height: var(--line-height-24px);
+  }
+  
 }
